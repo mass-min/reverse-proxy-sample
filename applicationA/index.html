@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Application A</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Application A</h1>
+<script>
+  const url = 'http://api.example.local/nicepage.html'
+
+  const main = () => {
+    axios
+      .get(url)
+      .then((res) => {
+        console.log(res.data)
+      })
+      .catch((err) => {
+        console.error('some error')
+      })
+  }
+
+  window.onload = main
+</script>
+
+</body>
+</html>

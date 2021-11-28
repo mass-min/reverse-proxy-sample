@@ -1,0 +1,3 @@
+location /nicepage.html {
+    proxy_pass http://nice.example.local/nicepage.html;
+}

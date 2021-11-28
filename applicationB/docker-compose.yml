@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  nginx-b:
+    image: nginx:latest
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./nicepage.html:/usr/share/nginx/html/nicepage.html
+    environment:
+      VIRTUAL_HOST: 'nice.example.local'
+
+networks:
+  default:
+    external: true
+    name: sample-network

@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy:latest
+    ports:
+      - '80:80'
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./www.example.local:/etc/nginx/vhost.d/www.example.local
+      - ./api.example.local:/etc/nginx/vhost.d/api.example.local
+networks:
+  default:
+    name: sample-network

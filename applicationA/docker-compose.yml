@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  nginx-a:
+    image: nginx:latest
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./nicepage.html:/usr/share/nginx/html/nicepage.html
+    environment:
+      VIRTUAL_HOST: 'www.example.local,admin.example.local,api.example.local'
+    networks:
+      default:
+        aliases:
+          - api.example.local
+
+networks:
+  default:
+    external: true
+    name: sample-network
