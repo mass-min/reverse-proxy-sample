@@ -3,7 +3,7 @@
 The sample codes of reverse proxy environment using Docker images.
 
 ## How to use?
-Please read the article!(written in Japanese)
+Please read the article!(the article is written in Japanese)
 - https://zenn.dev/masumi_sugae/articles/84c40d20c82cdd
 
 ## Thanks for...
